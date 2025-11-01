@@ -1,7 +1,7 @@
 import { BookOpen } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-
+import settings from "./../lib/settings";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -22,7 +22,7 @@ export default function Navbar() {
           <Link to="/" className="flex items-center gap-2">
             <BookOpen className="text-orange-600" />
             <span className="text-lg font-semibold text-orange-600">
-              Universal
+              {settings.company_name}
             </span>
           </Link>
 

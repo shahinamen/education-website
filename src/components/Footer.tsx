@@ -11,6 +11,7 @@ import {
   Waypoints,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import settings from "./../lib/settings";
 
 export default function Footer() {
   return (
@@ -23,7 +24,7 @@ export default function Footer() {
               <Link to="/" className="flex items-center gap-2">
                 <BookOpen className="text-orange-600" />
                 <span className="text-lg font-semibold text-orange-600">
-                  Universal
+                  {settings.company_name}
                 </span>
               </Link>
             </div>
@@ -172,7 +173,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="p-4 text-center text-gray-500 border-t border-orange-600 mt-4">
-        © {new Date().getFullYear()} Universal. All rights reserved.
+        © {new Date().getFullYear()} {settings.company_name}. All rights
+        reserved.
       </div>
     </footer>
   );
