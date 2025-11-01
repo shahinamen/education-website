@@ -121,3 +121,25 @@
     font-family: 'Outfit', sans-serif;
   }
 }
+/* embla carousel */
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f97316;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+/* embla carousel */

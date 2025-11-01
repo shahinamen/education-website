@@ -1,37 +1,56 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import React from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Slider() {
+  const [emblaRef] = useEmblaCarousel({ loop: true, align: "start" }, [
+    Autoplay({ delay: 3000 }),
+  ]);
+
+  const slides = [
+    {
+      image:
+        "https://images.pexels.com/photos/8466175/pexels-photo-8466175.jpeg",
+      title: "Slide 1",
+    },
+    {
+      image:
+        "https://images.pexels.com/photos/8466702/pexels-photo-8466702.jpeg",
+      title: "Slide 2",
+    },
+    {
+      image:
+        "https://images.pexels.com/photos/8465506/pexels-photo-8465506.jpeg",
+      title: "Slide 3",
+    },
+  ];
+
   return (
-    <>
-      <section className="p-8 text-center">
-        <h1 className="text-3xl font-bold text-gray-800">Get In Touch</h1>
-      </section>
-      <section className="p-8 text-center bg-gray-100 text-gray-300">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Address */}
-          <div className="flex flex-col items-center">
-            <MapPin className="text-orange-600 w-8 h-8 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-900 mb-1">
-              Address
-            </h3>
-            <p className="text-gray-400">123 Main Street New York, NY 10001</p>
+    <div className="embla overflow-hidden" ref={emblaRef}>
+      <div className="embla__container flex">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className="
+              embla__slide
+              flex-[0_0_100%]
+              relative
+              min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[500px]
+            "
+          >
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white drop-shadow-lg">
+                {slide.title}
+              </h2>
+            </div>
           </div>
-
-          {/* Phone */}
-          <div className="flex flex-col items-center">
-            <Phone className="text-orange-600 w-8 h-8 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-900 mb-1">Phone</h3>
-            <p className="text-gray-400">+1 (555) 123-4567</p>
-          </div>
-
-          {/* Email */}
-          <div className="flex flex-col items-center">
-            <Mail className="text-orange-600 w-8 h-8 mb-3" />
-            <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-            <p className="text-gray-400">info@universal.com</p>
-          </div>
-        </div>
-      </section>
-    </>
+        ))}
+      </div>
+    </div>
   );
 }
