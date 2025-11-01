@@ -1,4 +1,7 @@
-export default function Breadcrumb() {
+type BreadcrumbProps = {
+  pageTitle: string;
+};
+export default function Breadcrumb({ pageTitle }: BreadcrumbProps) {
   return (
     <div
       className="relative bg-cover bg-center flex items-center justify-center min-h-[300px]"
@@ -12,28 +15,21 @@ export default function Breadcrumb() {
 
       {/* Breadcrumb nav - centered content */}
       <nav className="relative z-10 text-center" aria-label="Breadcrumb">
+        <h1 className="text-xl text-white">{pageTitle}</h1>
         <ol
           className="flex items-center justify-center space-x-2 text-sm text-white"
           aria-label="Breadcrumb trail"
         >
           <li>
-            <a href="#" className="hover:underline">
+            <a href="/" className="hover:underline">
               Home
             </a>
           </li>
           <li className="text-gray-200" aria-hidden="true">
             /
           </li>
-          <li>
-            <a href="#" className="hover:underline">
-              Category
-            </a>
-          </li>
-          <li className="text-gray-200" aria-hidden="true">
-            /
-          </li>
           <li aria-current="page" className="text-white/90">
-            Current Page
+            {pageTitle}
           </li>
         </ol>
       </nav>
