@@ -1,5 +1,5 @@
-import { Camera } from "lucide-react";
-import React, { useState } from "react";
+import { BookOpen } from "lucide-react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
@@ -20,8 +20,8 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <Camera />
-            <span className="text-lg font-semibold text-slate-900">
+            <BookOpen className="text-orange-600" />
+            <span className="text-lg font-semibold text-orange-600">
               Universal
             </span>
           </Link>
@@ -34,7 +34,7 @@ export default function Navbar() {
                 to={item.path}
                 className={`text-sm transition-colors ${
                   location.pathname === item.path
-                    ? "text-indigo-600 font-medium"
+                    ? "text-orange-600 font-medium"
                     : "text-slate-700 hover:text-slate-900"
                 }`}
               >
@@ -47,7 +47,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               to="/enroll"
-              className="inline-flex items-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
+              className="inline-flex items-center rounded-md bg-orange-600 px-4 py-2 text-sm font-medium text-white hover:bg-orange-700"
             >
               Enroll Now
             </Link>
@@ -59,7 +59,7 @@ export default function Navbar() {
             className="md:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-md"
           >
             <svg
-              className="h-6 w-6"
+              className="h-6 w-6 text-orange-600 cursor-pointer"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -98,7 +98,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className={`block rounded-md px-3 py-2 text-base ${
                 location.pathname === item.path
-                  ? "text-indigo-600 font-medium"
+                  ? "text-orange-600 font-medium"
                   : "text-slate-700 hover:bg-slate-100"
               }`}
             >
@@ -109,7 +109,7 @@ export default function Navbar() {
           <Link
             to="/enroll"
             onClick={() => setOpen(false)}
-            className="mt-3 inline-flex justify-center rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
+            className="mt-3 inline-flex justify-center rounded-md bg-orange-600 px-4 py-2 text-sm font-medium text-white hover:bg-orange-700"
           >
             Enroll Now
           </Link>
