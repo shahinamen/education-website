@@ -5,7 +5,8 @@ import About from "./pages/About";
 import Admissions from "./pages/Admissions";
 import Academics from "./pages/Academics";
 import Contact from "./pages/Contact";
-import "./App.css"
+import "./App.css";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -20,9 +21,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-      <footer className="p-4 text-center text-gray-500 border-t">
-        © {new Date().getFullYear()} AcademyName. All rights reserved.
-      </footer>
+      <Footer />
     </div>
   );
 }
