@@ -55,11 +55,11 @@ export default function Slider() {
               <p className="text-white text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed drop-shadow">
                 {slide.subTitle}
               </p>
-              <div className="flex items-center justify-center space-x-4 mt-6">
-                <button className="px-6 py-2 rounded-full cursor-pointer bg-orange-600 text-white sm:text-base md:text-lg font-semibold shadow-md hover:bg-white hover:text-orange-600 transition duration-300 ease-in-out">
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
+                <button className="px-6 py-2 rounded-full cursor-pointer bg-orange-600 text-white sm:text-base md:text-lg shadow-md hover:bg-white hover:text-orange-600 transition duration-300 ease-in-out">
                   Classes
                 </button>
-                <button className="px-6 py-2 rounded-full cursor-pointer bg-white text-orange-600 sm:text-base md:text-lg font-semibold shadow-md border border-orange-600 hover:bg-orange-600 hover:text-white transition duration-300 ease-in-out">
+                <button className="px-6 py-2 rounded-full cursor-pointer bg-white text-orange-600 sm:text-base md:text-lg shadow-md border border-orange-600 hover:bg-orange-600 hover:text-white transition duration-300 ease-in-out">
                   Enroll Now
                 </button>
               </div>
