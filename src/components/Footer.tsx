@@ -1,180 +1,62 @@
 import {
-  Book,
-  BookAlert,
   BookOpen,
-  BookOpenCheck,
-  Contact,
-  Home,
-  Notebook,
-  Settings,
-  User,
-  Waypoints,
+  Facebook,
+  Instagram,
+  Linkedin,
+  MapPin,
+  Mail,
+  Phone,
+  Twitter,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import settings from "./../lib/settings";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start space-y-10 md:space-y-0">
-          {/* Logo and About Us */}
-          <div className="md:w-1/4">
-            <div className="mb-4">
-              <Link to="/" className="flex items-center gap-2">
-                <BookOpen className="text-orange-600" />
-                <span className="text-lg font-semibold text-orange-600">
-                  {settings.company_name}
-                </span>
-              </Link>
-            </div>
-            <p className="text-sm text-white">
-              We are a company dedicated to providing the best solutions for
-              your needs. Our mission is to deliver quality and excellence in
-              every project.
+    <footer className="bg-slate-900 pt-12 text-slate-300">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 md:grid-cols-3">
+          <div>
+            <Link to="/" className="flex items-center gap-2">
+              <BookOpen className="h-6 w-6 text-orange-500" />
+              <span className="text-lg font-bold text-orange-500">{settings.company_name}</span>
+            </Link>
+            <p className="mt-4 text-sm leading-7 text-slate-400">
+              We believe education should inspire curiosity, strengthen character, and
+              open doors to a brighter future for every student.
             </p>
           </div>
 
-          {/* Links Section */}
-          <div className="md:w-3/4 grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {/* Important Links */}
-            <div>
-              <h3 className="text-orange-600 font-semibold mb-4">
-                Important Links
-              </h3>
-              <ul className="space-y-2 text-medium text-white">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-orange-600 flex items-center"
-                  >
-                    <Home size={24} className="pr-2" />
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-orange-600 flex items-center"
-                  >
-                    <Settings size={24} className="pr-2" />
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-orange-600 flex items-center"
-                  >
-                    <User size={24} className="pr-2" />
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-orange-600 flex items-center"
-                  >
-                    <Contact size={24} className="pr-2" />
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div>
+            <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
+            <ul className="space-y-3 text-sm">
+              <li><Link to="/" className="hover:text-orange-400">Home</Link></li>
+              <li><Link to="/about" className="hover:text-orange-400">About</Link></li>
+              <li><Link to="/academics" className="hover:text-orange-400">Academics</Link></li>
+              <li><Link to="/admissions" className="hover:text-orange-400">Admissions</Link></li>
+              <li><Link to="/contact" className="hover:text-orange-400">Contact</Link></li>
+            </ul>
+          </div>
 
-            {/* Policy */}
-            <div>
-              <h3 className="text-orange-600 font-semibold mb-4">Policy</h3>
-              <ul className="space-y-2 text-sm text-white">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-orange-600  flex items-center"
-                  >
-                    <BookOpenCheck size={24} className="pr-2" />
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-orange-600  flex items-center"
-                  >
-                    <BookAlert size={24} className="pr-2" />
-                    Terms of Service
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-orange-600  flex items-center"
-                  >
-                    <Book size={24} className="pr-2" />
-                    Cookie Policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-orange-600  flex items-center"
-                  >
-                    <Notebook size={24} className="pr-2" />
-                    Usage Policy
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Social Media */}
-            <div>
-              <h3 className="text-orange-600 font-semibold mb-4">
-                Social Media
-              </h3>
-              <ul className="space-y-2 text-sm text-white">
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-orange-600  flex items-center"
-                  >
-                    <Waypoints size={24} className="pr-2" />
-                    Facebook
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-orange-600  flex items-center"
-                  >
-                    <Waypoints size={24} className="pr-2" />
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-orange-600  flex items-center"
-                  >
-                    <Waypoints size={24} className="pr-2" />
-                    Instagram
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-orange-600  flex items-center"
-                  >
-                    <Waypoints size={24} className="pr-2" />
-                    LinkedIn
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div>
+            <h3 className="mb-4 text-lg font-semibold text-white">Contact</h3>
+            <ul className="space-y-3 text-sm text-slate-300">
+              <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-orange-400" /> {settings.address}</li>
+              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-orange-400" /> {settings.tel}</li>
+              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-orange-400" /> {settings.email}</li>
+            </ul>
           </div>
         </div>
-      </div>
-      <div className="p-4 text-center text-gray-500 border-t border-orange-600 mt-4">
-        © {new Date().getFullYear()} {settings.company_name}. All rights
-        reserved.
+
+        <div className="mt-10 flex flex-col gap-4 border-t border-slate-700 py-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-slate-400">© {new Date().getFullYear()} {settings.company_name}. All rights reserved.</p>
+          <div className="flex gap-3 text-slate-400">
+            <a href="#" className="rounded-full border border-slate-700 p-2 hover:border-orange-400 hover:text-orange-400"><Facebook className="h-4 w-4" /></a>
+            <a href="#" className="rounded-full border border-slate-700 p-2 hover:border-orange-400 hover:text-orange-400"><Twitter className="h-4 w-4" /></a>
+            <a href="#" className="rounded-full border border-slate-700 p-2 hover:border-orange-400 hover:text-orange-400"><Instagram className="h-4 w-4" /></a>
+            <a href="#" className="rounded-full border border-slate-700 p-2 hover:border-orange-400 hover:text-orange-400"><Linkedin className="h-4 w-4" /></a>
+          </div>
+        </div>
       </div>
     </footer>
   );
